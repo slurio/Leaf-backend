@@ -1,0 +1,2 @@
+class ItemFiberFactsController < ApplicationController
+end

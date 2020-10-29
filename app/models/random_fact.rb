@@ -1,0 +1,3 @@
+class RandomFact < ApplicationRecord
+
+end
