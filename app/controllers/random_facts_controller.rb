@@ -2,7 +2,7 @@ class RandomFactsController < ApplicationController
 
     def index
         facts = RandomFact.all
-
-        render json: facts
+        random_fact = facts.sample
+        render json: random_fact
     end
 end

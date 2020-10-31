@@ -18,6 +18,10 @@ RandomFact.create(fact: 'Buy used clothes!')
 sam = User.create(username: "Sam", password: "test")
 
 peru = CountryFact.create(country: "Peru", description: "This is a test", img: "")
+CountryFact.create(country: "China", description: "This is a test", img: "https://toppng.com/uploads/preview/world-globe-png-clip-freeuse-download-world-map-globe-11562910726e1f0hvovtx.png")
+CountryFact.create(country: "USA", description: "This is a test", img: "")
+CountryFact.create(country: "India", description: "This is a test", img: "")
+
 
 tee = Item.create(title: "striped tee", front_tag_img: "", back_tag_img: "", user: sam, country_fact: peru)
 
@@ -46,8 +50,8 @@ FiberFact.create(name: "cotton lisle", description: "A hard-spun two-ply cotton 
 FiberFact.create(name: "damask", description: "Damask refers to the type of weave used to create jacquard-woven florals or geometric designs. The fabric can be made from cotton, linen, polyester, or blended fibers.", care_instructions: "")
 FiberFact.create(name: "double knit", description: "A knit fabric in which two layers of loops are formed that cannot be separated. A double knit machine, which has two complete sets of needles, is required for this construction.", care_instructions: "")
 FiberFact.create(name: "ecosil polyester", description: "Ecosil means the polyester fibers are spun very compactly to give the fabric a clean appearance and a resistance to pilling and abrasion.", care_instructions: "")
-FiberFact.create(name: "egyptian cotton", description: "All cotton grown in Egypt is "Egyptian" but not all of it is extra-long-staple cotton which is the most desirable and softest.", care_instructions: "")
-FiberFact.create(name: "elastane", description: "Elastane is just another name for spandex. The word "elastane" is used in Europe while spandex is used in the United States. Elastane/spandex trade names are Lycra and Dorlastan.", care_instructions: "")
+FiberFact.create(name: "egyptian cotton", description: "All cotton grown in Egypt is Egyptian but not all of it is extra-long-staple cotton which is the most desirable and softest.", care_instructions: "")
+FiberFact.create(name: "elastane", description: "Elastane is just another name for spandex. The word elastane is used in Europe while spandex is used in the United States. Elastane/spandex trade names are Lycra and Dorlastan.", care_instructions: "")
 FiberFact.create(name: "fiberfill", description: "A lightweight, synthetic fiber that can be used to line coats, vests, and padded garments", care_instructions: "")
 FiberFact.create(name: "interlock knit", description: "A rib stitch variation, interlock stitch fabrics are thicker, heavier, and more stable than single knit constructions.", care_instructions: "")
 FiberFact.create(name: "italian nylon", description: "A very high quality knit fabric with 4-way stretch that comes from Italy. Italian nylon includes some Lycra to give great stretch and recovery, abrasion resistance, and anti-bacterial qualities.", care_instructions: "")
