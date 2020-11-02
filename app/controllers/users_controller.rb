@@ -8,14 +8,18 @@ class UsersController < ApplicationController
 
     def create
         findUser = User.find_by(username: params['user']['username'])
-        
-        if params['user']['password'] === findUser.password
+
+        if findUser == nil && findUser.password == nil
+            User.create(username: params['user']['username'], password: params['user']['password'])
+        elsif findUser == nil || params['user']['password'] != findUser.password
+            render json: {username: false}
+        elsif params['user']['password'] == findUser.password
             render json: findUser
         end
     end
 
     private
     def user_params
-        params.require.(:user).permit(:username, :password)
+        params.require.(:user).permit(:username, :password, :user_id)
     end
 end
