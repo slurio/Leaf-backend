@@ -6,6 +6,8 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+
+
 User.destroy_all
 Item.destroy_all
 RandomFact.destroy_all
@@ -47,22 +49,13 @@ RandomFact.create(fact: 'The fashion industry is projected to use 35% more land 
 sam = User.create(username: "Sam", password: "test")
 
 
-CountryFact.create(country: "USA", description: "The United States is a globally competitive manufacturer and exporter of textile raw materials, fabrics, yarns, apparel, home furnishing, and other textile products. The United States is the 8th largest textile exporter. The strength of US textile lies in Non-Woven, Specialty and Industrial Fabrics, Medical Textiles and Protective Apparel.", img: '../app/assets/images/USA.png')
+CountryFact.create(country: "USA", description: "The United States is a globally competitive manufacturer and exporter of textile raw materials, fabrics, yarns, apparel, home furnishing, and other textile products. The United States is the 8th largest textile exporter. The strength of US textile lies in Non-Woven, Specialty and Industrial Fabrics, Medical Textiles and Protective Apparel.", img: './app/assets/images/China.png')
 CountryFact.create(country: "India", description: "The textile and apparel industry in India is among the world’s largest producers and exports. Indian Textile Industry has broadly classified into two segments: First, the unorganized sector consists of handloom, handicraft, and sericulture, which are operated on a small scale practicing traditional tools and methods. The second is the organized one which applies modern machinery and techniques. High-cost products add cost pressure on the value chain, making yarn, fabric and apparel exports less competitive.", img: "")
-CountryFact.create(country: "China", description: "The textile industry of China is the largest manufacturer and exporter in the world with an export turnover of $266.41 Billion. The factors driving the industry in China are low-cost production, raw material quality, industrial structure,  and modern high-tech machinery. The output volume of China textile industry accounts for more than half of the global market.", img:'../app/assets/images/China.png')
+CountryFact.create(country: "China", description: "The textile industry of China is the largest manufacturer and exporter in the world with an export turnover of $266.41 Billion. The factors driving the industry in China are low-cost production, raw material quality, industrial structure,  and modern high-tech machinery. The output volume of China textile industry accounts for more than half of the global market.", img:'/Users/Sam/Development/code/Mod5/FinalProject/Leaf-backend/app/assets/images/China.png')
 CountryFact.create(country: "Germany", description: "Has a long history of manufacturing, innovation, and flexibility. Germany is one of the biggest exporters of knitted apparel cloth, man made fibers, synthetic yarn, and machinery. The country is the world’s second largest textile exporter and well known for high quality products.", img: "")
 CountryFact.create(country: "Bangladesh", description: "In recent decades, Bangladesh has emerged as a powerhouse for apparel manufacturing. The country’s strengths are low labor cost and vast workforce. Advance technology and High-quality products have attracted many major global retail brands to Bangladesh. ", img: "")
 CountryFact.create(country: "Vietnam", description: "The Textile industry of Vietnam is known for  low labor costs and is the top 4th global exporter of textile and apparel. The country's major focus is producing items with high competitiveness in the global market.", img: "")
 CountryFact.create(country: "Italy", description: "Is important to the sustainable apparel and fashion world. Italy covers the entire range of fibers, with cotton, linen, silk, and wool. Italian textile industry is strongly export-oriented. Industry shows a more solid production structure with innovative technologies. Product innovation of Italy is entirely focused on the technical performance of fabrics and yarns to extend the areas of application. Italy is producing a large range of E-textile with new technologies to provide benefits to the wearer.", img: "")
-
-
-
-# tee = Item.create(title: "striped tee", front_tag_img: "", back_tag_img: "", user: sam, country_fact: peru)
-
-# cotton = FiberFact.create(name: "cotton", description: "this is a breathable fiber", care_instructions: "Wash in cold water")
-# spandex = FiberFact.create(name: "spandex", description: "this is a breathable fiber", care_instructions: "Wash in cold water")
-
-
 
 FiberFact.create(name: "Acetate", description: "A manufactured fiber refined from cotton filaments or wood pulp and acetic acid that has been extruded through a spinneret and then hardened.", care_instructions: "Best to hand wash in cold water. Skip the dryer and air-dry by laying item flat.")
 FiberFact.create(name: "Antron", description: "A type of nylon made by DuPont.", care_instructions: "")
@@ -89,7 +82,7 @@ FiberFact.create(name: "Fiberfill", description: "A lightweight, synthetic fiber
 FiberFact.create(name: "Interlock knit", description: "A rib stitch variation, interlock stitch fabrics are thicker, heavier, and more stable than single knit constructions.", care_instructions: "")
 FiberFact.create(name: "Italian nylon", description: "A very high quality knit fabric with 4-way stretch that comes from Italy. Italian nylon includes some Lycra to give great stretch and recovery, abrasion resistance, and anti-bacterial qualities.", care_instructions: "")
 FiberFact.create(name: "Latex", description: "Latex is made with rubber and thus has rubber-like qualities. It is used in some fabrics to provide greater elasticity.", care_instructions: "")
-FiberFact.create(name: "Linen", description: "A fabric made from fibers obtained from inside the woody stem of the flax plant. The fibers are much stronger and more lustrous than cotton. Linen fabrics are very cool and absorbent but wrinkle very easily unless blended with manufactured fibers. Linen is one of the world's oldest textile fibers.", care_instructions: "")
+FiberFact.create(name: "Linen", description: "A fabric made from fibers obtained from inside the woody stem of the flax plant. The fibers are much stronger and more lustrous than cotton. Linen fabrics are very cool and absorbent but wrinkle very easily unless blended with manufactured fibers. Linen is one of the world's oldest textile fibers.", care_instructions: "Linen becomes softer and more absorbent after each wash, which is pretty neat. Wash linen on low temperatures in lukewarm or cold, and preferably soft, water. Use the gentle machine cycle and a mild detergent to protect the fibres.")
 FiberFact.create(name: "Lycra", description: "Lycra is the trademarked spandex fiber produced by DuPont. It is lightweight and soft, but stronger and more durable than rubber and is used in compression garments, swimwear, and bras.", care_instructions: "")
 FiberFact.create(name: "Lyocell", description: "Lyocell is a cellulose fabric obtained by an organic solvent spinning process. This fabric is a sub-category of rayon. Tencel is the trademark name for lyocell.", care_instructions: "")
 FiberFact.create(name: "Merino wool", description: "Merino wool comes from certain sheep that produce a wool fiber that is long and fine. The result is a fabric that is thin, soft, and luxurious.", care_instructions: "")
@@ -114,11 +107,6 @@ FiberFact.create(name: "Viscose", description: "The European term for rayon.", c
 FiberFact.create(name: "Vinyl", description: "A shiny, plastic-coated fabric typically made with a woven backing of polyester fibers that are then coated with polyvinyl chloride or a blend of PVC and polyurethane.", care_instructions: "")
 FiberFact.create(name: "Wool", description: "Wool is a natural fiber that comes from the fleece of a sheep, goat, llama, or alpaca. It can be knitted or woven.", care_instructions: "Turn wool item inside out. Wash on delicate or wool cycle. If possible hand wash item. Use cold water and mild liquid detergent like Woollite. Air dry item on flat surface.")
 
-
-
-
-# ItemFiberFact.create(item: tee, fiber_fact: cotton, percentage: "80%")
-# ItemFiberFact.create(item: tee, fiber_fact: spandex, percentage: "20%")
 
 
 
