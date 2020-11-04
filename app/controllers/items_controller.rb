@@ -42,6 +42,14 @@ class ItemsController < ApplicationController
         end
     end
 
+    def destroy
+        item = Item.find(params[:id])
+        item.destroy
+
+        items = Item.all
+        render json: items
+    end
+
     private
     def item_params
         params.require(:item).permit(:title, :user_id, :front_tag_img, :back_tag_img)
