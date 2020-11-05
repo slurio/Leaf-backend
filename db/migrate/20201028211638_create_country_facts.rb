@@ -3,7 +3,6 @@ class CreateCountryFacts < ActiveRecord::Migration[6.0]
     create_table :country_facts do |t|
       t.string :country
       t.string :description
-      t.string :img
 
       t.timestamps
     end

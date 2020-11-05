@@ -10,34 +10,22 @@ class UsersController < ApplicationController
 
         if params['passwordConfirm']
             if findUser == nil && params['password'] == params['passwordConfirm']
-                newUser = User.create(username: params['user']['username'], password: params['user']['password'])
+                newUser = User.create(username: params['user']['username'], name: params['user']['name'], password: params['user']['password'])
                 render json: newUser
             else
-                render json: {username: false}
+                render json: false
             end
         else
-            #user not found in system conditional
             if findUser == nil || params['user']['password'] != findUser.password
-                render json: {username: false}
+                render json: false
             elsif params['user']['password'] == findUser.password
                 render json: findUser
             end
         end
-        
-        # if findUser == nil && params['password'] == params['passwordConfirm']
-        #     newUser = User.create(username: params['user']['username'], password: params['user']['password'])
-        #     render json: newUser
-        # elsif findUser == nil && params['password'] != params['passwordConfirm']
-        #     render json: {username: false}
-        # elsif findUser && params['user']['password'] != findUser.password
-        #     render json: {username: false}
-        # elsif params['user']['password'] == findUser.password
-        #     render json: findUser
-        # end
     end
 
     private
     def user_params
-        params.require.(:user).permit(:username, :password, :user_id)
+        params.require.(:user).permit(:username, :name, :password, :user_id)
     end
 end

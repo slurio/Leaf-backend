@@ -18,7 +18,6 @@ ActiveRecord::Schema.define(version: 2020_10_28_211921) do
   create_table "country_facts", force: :cascade do |t|
     t.string "country"
     t.string "description"
-    t.string "img"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -43,8 +42,6 @@ ActiveRecord::Schema.define(version: 2020_10_28_211921) do
 
   create_table "items", force: :cascade do |t|
     t.string "title"
-    t.string "front_tag_img"
-    t.string "back_tag_img"
     t.bigint "user_id"
     t.bigint "country_fact_id"
     t.datetime "created_at", precision: 6, null: false
@@ -61,6 +58,7 @@ ActiveRecord::Schema.define(version: 2020_10_28_211921) do
 
   create_table "users", force: :cascade do |t|
     t.string "username"
+    t.string "name"
     t.string "password"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
