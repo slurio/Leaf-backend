@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(version: 2020_10_28_211921) do
     t.string "name"
     t.string "description"
     t.string "care_instructions"
+    t.boolean "natural_fiber"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

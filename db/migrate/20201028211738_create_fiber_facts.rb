@@ -4,6 +4,7 @@ class CreateFiberFacts < ActiveRecord::Migration[6.0]
       t.string :name
       t.string :description
       t.string :care_instructions
+      t.boolean :natural_fiber
 
       t.timestamps
     end
