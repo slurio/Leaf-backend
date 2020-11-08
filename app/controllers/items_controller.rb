@@ -86,6 +86,14 @@ class ItemsController < ApplicationController
         end
     end
 
+    def update
+        item = Item.find(params[:id])
+        item_fiber_fact = item.item_fiber_facts.find(params['itemFiberFactId'])
+        item_fiber_fact.destroy
+    
+        render json: item
+    end
+
     def destroy
         item = Item.find(params[:id])
         item.destroy

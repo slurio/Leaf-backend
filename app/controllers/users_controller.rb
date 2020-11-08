@@ -7,9 +7,9 @@ class UsersController < ApplicationController
 
     def create
         findUser = User.find_by(username: params['user']['username'])
-
+        
         if params['passwordConfirm']
-            if findUser == nil && params['password'] == params['passwordConfirm']
+            if findUser == nil && params['password'] == params['passwordConfirm'] && params['user']['username'] != ""
                 newUser = User.create(username: params['user']['username'], name: params['user']['name'], password: params['user']['password'])
                 render json: newUser
             else

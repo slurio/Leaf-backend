@@ -54,6 +54,11 @@ CountryFact.create(country: "Germany", description: "Has a long history of manuf
 CountryFact.create(country: "Bangladesh", description: "In recent decades, Bangladesh has emerged as a powerhouse for apparel manufacturing. The country’s strengths are low labor cost and vast workforce. Advance technology and High-quality products have attracted many major global retail brands to Bangladesh. ")
 CountryFact.create(country: "Vietnam", description: "The Textile industry of Vietnam is known for  low labor costs and is the top 4th global exporter of textile and apparel. The country's major focus is producing items with high competitiveness in the global market.")
 CountryFact.create(country: "Italy", description: "Is important to the sustainable apparel and fashion world. Italy covers the entire range of fibers, with cotton, linen, silk, and wool. Italian textile industry is strongly export-oriented. Industry shows a more solid production structure with innovative technologies. Product innovation of Italy is entirely focused on the technical performance of fabrics and yarns to extend the areas of application. Italy is producing a large range of E-textile with new technologies to provide benefits to the wearer.")
+CountryFact.create(country: "Honduras", description: "A booming place for synthetic yarn and activewear market. Honduras is Central America’s top textile exporter. 83% of Honduran textile exports are destined for the US market and make up mostly of cotton t-shirts and fleecewear.")
+CountryFact.create(country: "Poland", description: "With hundreds of years of traditional weaving experience, coupled with the newest technology sewing machines, Polish manufacturers offer their clients highly detailed garments, with good lead times, and offer excellent consultation built of years of understanding apparel making.")
+
+
+
 
 FiberFact.create(name: "Acetate", natural_fiber: false, description: "A manufactured fiber refined from cotton filaments or wood pulp and acetic acid that has been extruded through a spinneret and then hardened.", care_instructions: "Best to hand wash in cold water. Skip the dryer and air-dry by laying item flat.")
 FiberFact.create(name: "Bamboo", natural_fiber: true, description: "Bamboo fabric is made from the pulp of the bamboo grass. It is light and strong, has excellent wicking properties, and some antibacterial properties to reduce odors. Bamboo fabric has insulating properties to keep the wearer cooler in summer and warmer in winter.", care_instructions: "Will maintain their special qualities when washed in cold to warm water (up to 40 degrees Celsius) with a gentle detergent, free of bleach. You may want to use a gentle cycle for some finished garments and fabric types. If necessary, bamboo fabrics can be dried in a clothes dryer on the cool setting.")
@@ -78,17 +83,6 @@ FiberFact.create(name: "Spandex", natural_fiber: false, description: "A syntheti
 FiberFact.create(name: "Viscose", natural_fiber: false, description: "The European term for rayon.", care_instructions: "A highly absorbent fabric, relatively inelastic and therefore very delicate especially when wet. This is why we recommend you hand wash, with cold or lukewarm water (maximum 20° C) rather than machine wash.")
 wool = FiberFact.create(name: "Wool", natural_fiber: true, description: "Wool is a natural fiber that comes from the fleece of a sheep, goat, llama, or alpaca. It can be knitted or woven.", care_instructions: "Turn wool item inside out. Wash on delicate or wool cycle. If possible hand wash item. Use cold water and mild liquid detergent like Woollite. Air dry item on flat surface.")
 
-one = Item.create(title: 'itemOne',user: sam, country_fact: usa)
-two = Item.create(title: 'itemTwo',user: sam, country_fact: usa)
-three = Item.create(title: 'itemThree',user: sam, country_fact: china)
-
-
-ItemFiberFact.create(percentage: '100%',item: one, fiber_fact: cotton)
-ItemFiberFact.create(percentage: '50%',item: two, fiber_fact: cotton)
-ItemFiberFact.create(percentage: '50%',item: two, fiber_fact: polyester)
-ItemFiberFact.create(percentage: '10%',item: three, fiber_fact: linen)
-ItemFiberFact.create(percentage: '40%',item: three, fiber_fact: wool)
-ItemFiberFact.create(percentage: '50%',item: three, fiber_fact: cotton)
 
 
 
