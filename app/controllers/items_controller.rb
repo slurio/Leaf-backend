@@ -17,10 +17,9 @@ class ItemsController < ApplicationController
             if params['back_tag_img']
                 frontData = params['front_tag_img'].gsub("\n", ' ').downcase
                 backData = params['back_tag_img'].gsub("\n", ' ').downcase
-
                 country_data = CountryFact.all.select {|country| frontData.include?(country.country.downcase) }
 
-                if country_data === []
+                if country_data == []
                     country_data = CountryFact.all.select {|country| backData.include?(country.country.downcase) }
                 end
 
@@ -33,7 +32,7 @@ class ItemsController < ApplicationController
                     end
                 end
 
-                if fibers_data = []
+                if fibers_data == []
                     FiberFact.all.select do |fiber| 
                         if(backData.include?(fiber.name.downcase))
                             index = backData.split.index{|index| index.include?(fiber.name.downcase)}
@@ -55,6 +54,7 @@ class ItemsController < ApplicationController
                     country_data: country_data,
                     fibers_data: fibers_data,
                 }
+                
                 render json: item_data
             else
                 data = params['front_tag_img'].gsub("\n", ' ').downcase
@@ -98,8 +98,7 @@ class ItemsController < ApplicationController
         item = Item.find(params[:id])
         item.destroy
 
-        items = Item.all
-        render json: items
+        render json: item
     end
 
     private
