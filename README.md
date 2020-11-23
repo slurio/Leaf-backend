@@ -14,7 +14,7 @@ Coming Soon...
 
 ## Dev Tools
 
-### [Frontend](https://github.com/slurio/TheThread-Frontend)
+#### [Frontend](https://github.com/slurio/TheThread-Frontend)
 
 - React Native
 - Redux
