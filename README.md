@@ -16,7 +16,7 @@ A User can :
 
 ## Dev Tools
 
-Frontend
+[Frontend](https://github.com/slurio/TheThread-Frontend)
 
 - React Native
 - Redux
@@ -25,7 +25,7 @@ Frontend
 - Victory Charts
 - Styled-Components
 
-[Backend](https://github.com/slurio/TheThread-Backend)
+Backend
 
 - Ruby on Rails
 - PostgreSQL
